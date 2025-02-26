@@ -67,7 +67,7 @@ const App: React.FC = (): React.ReactNode => {
 				<div className="row justify-content-center">
 					<div className="col-12 col-md-8 list">
 						<h2>Events</h2>
-						<h3 className="cta">3.23.25 - <a href="https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179" target="_blank" rel="noreferrer">Sundaze Music & Arts Festival</a></h3>
+						<h3 className="cta"><time dateTime="2018-03-23">3.23.25</time> - <a href="https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179" target="_blank" rel="noreferrer">Sundaze Music & Arts Festival</a></h3>
 					</div>
 				</div>
 			</section>
