@@ -12,9 +12,9 @@ import TrippyLogo from './logo-trippy.png'
 import Trippy from './components/Trippy'
 
 interface ThemeItem {
-  name: string;
-  element: React.ReactNode;
-  header: React.ReactNode;
+	name: string;
+	element: React.ReactNode;
+	header: React.ReactNode;
 }
 
 const App: React.FC = (): React.ReactNode => {
@@ -25,12 +25,12 @@ const App: React.FC = (): React.ReactNode => {
 			element: null,
 			header: <img className="nm-logo" src={NormalLogo} alt={header_text} />
 		},
-		{	
+		{
 			name: 'neon',
 			element: <Particles />,
 			header: <h1>{header_text}</h1>
 		},
-		{	
+		{
 			name: 'eighties',
 			element: null,
 			header: <h1>{header_text}</h1>
@@ -52,7 +52,7 @@ const App: React.FC = (): React.ReactNode => {
 		},
 	]
 
-	const {header, name, element} = themes[Math.floor(Math.random() * themes.length)];
+	const { header, name, element } = themes[Math.floor(Math.random() * themes.length)];
 
 	return (
 		<div id="home" className={`App ${name}`}>
@@ -62,9 +62,15 @@ const App: React.FC = (): React.ReactNode => {
 				<Social />
 				<h2 className="cta"><a href="mailto:nervousmonks@gmail.com">Contact</a></h2>
 				<h2 className="cta"><a href="https://www.teepublic.com/user/nervous-monks" target="_blank" rel="noreferrer">Merchandise</a></h2>
-        <h2>Events</h2>
-        <h3 className="cta">3.23.25 - <a href="https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179" target="_blank" rel="noreferrer">Sundaze Music & Arts Festival</a></h3>
 			</nav>
+			<section className="container events mt-5">
+				<div className="row justify-content-center">
+					<div className="col-12 col-md-8 list">
+						<h2>Events</h2>
+						<h3 className="cta">3.23.25 - <a href="https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179" target="_blank" rel="noreferrer">Sundaze Music & Arts Festival</a></h3>
+					</div>
+				</div>
+			</section>
 			<section className="container media youtube music-video mt-5">
 				<div className="row">
 					<div className="col-12">
