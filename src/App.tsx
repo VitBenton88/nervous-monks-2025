@@ -1,4 +1,5 @@
 import './sass/style.scss'
+import Events from './components/Events'
 import Particles from './components/Particles'
 import Social from './components/Social'
 import YoutubeEmbed from './components/YoutubeEmbed'
@@ -67,7 +68,7 @@ const App: React.FC = (): React.ReactNode => {
 				<div className="row justify-content-center">
 					<div className="col-12 col-md-8 list">
 						<h2 className="mb-3">Events:</h2>
-						<h3 className="cta"><time dateTime="2018-03-23">3.23.25</time> - <a href="https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179" target="_blank" rel="noreferrer">Sundaze Music & Arts Festival</a></h3>
+						<Events />
 					</div>
 				</div>
 			</section>
