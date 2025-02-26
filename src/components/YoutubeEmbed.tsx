@@ -1,19 +1,22 @@
 import React from 'react';
 
 interface YoutubeEmbedProps {
-    embedId: string;
+    embedId?: string;
 }
 
-const YoutubeEmbed: React.FC<YoutubeEmbedProps> = (embedId): React.ReactNode => {
-    return ( 
+const YoutubeEmbed: React.FC<YoutubeEmbedProps> = ({ embedId = "9XjjFLAchb0" }): React.ReactNode => {
+    return (
         <iframe
-            width="853"
-            height="480"
+            width="560"
+            height="315" 
             src={`https://www.youtube.com/embed/${embedId}`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Embedded youtube"
-        />
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+        >
+        </iframe>
     )
 };
 
