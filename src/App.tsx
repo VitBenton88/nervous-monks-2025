@@ -4,11 +4,11 @@ import Social from './components/Social'
 import YoutubeEmbed from './components/YoutubeEmbed'
 import Vortex from './components/Vortex'
 import Orb from './components/Orb'
-import RedLogo from './logo-red.png'
-import NormalLogo from './logo-regular.png'
+import RedLogo from './assets/logo-red.png'
+import NormalLogo from './assets/logo-regular.png'
 import React from 'react';
-import VortexLogo from './logo-vortex.png'
-import TrippyLogo from './logo-trippy.png'
+import VortexLogo from './assets/logo-vortex.png'
+import TrippyLogo from './assets/logo-trippy.png'
 import Trippy from './components/Trippy'
 
 interface ThemeItem {
