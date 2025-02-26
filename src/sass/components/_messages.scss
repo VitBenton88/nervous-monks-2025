@@ -1,0 +1,28 @@
+@use "../core/colors" as *;
+
+section.messages {
+  margin-top: 50px;
+
+  .message {
+    padding: .75rem 1.25rem;
+
+    &.success {
+      background: $successMsgBkgColor;
+      border: 1px solid $successMsgBorderColor;
+
+        span, i {
+          color: $successMsgFontColor;
+        }
+
+    }
+
+    &.error {
+      background: $errorMsgBkgColor;
+      border: 1px solid $errorMsgBorderColor;
+
+        span, i {
+          color: $errorMsgFontColor;
+        }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@use "colors" as *;
+
+@keyframes grow_eighties_header {
+    from {
+        transform: skew(-15deg,-15deg) scale(0)
+    }
+    to {
+        transform: skew(-15deg,-15deg) scale(1)
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);
+  }
+    100% { transform: rotate(360deg);
+  }
+}
+
+@keyframes bkg_to_black {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: $black;
+    }
+}
+
+@keyframes text_to_neon {
+    from {
+        color: $black;
+        text-shadow: none;
+    }
+    to {
+        color: #fff;
+        text-shadow: $neon_purple;
+    }
+}
+
+@keyframes trippy_rotate {
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

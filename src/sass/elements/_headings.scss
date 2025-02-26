@@ -1,0 +1,17 @@
+@use "../core/colors" as *;
+@use "../core/fonts" as *;
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: $black;
+    font-family: $major-mono;
+}

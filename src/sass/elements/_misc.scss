@@ -1,0 +1,17 @@
+@use "../core/colors" as *;
+
+hr {
+    color: $grey;
+    border-style: solid;
+    border-bottom: none;
+    margin-top: 25px;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}

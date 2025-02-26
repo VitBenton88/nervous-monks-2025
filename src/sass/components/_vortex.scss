@@ -1,0 +1,86 @@
+@use "../core/colors" as *;
+
+#vortex {
+//CONFIG
+// Play with these for some cool effects (use rems to keep it consistent)
+// Show me on twitter if you find a cool combination @nathantokyo
+
+$time: 10s; //overall time for 1 rotation
+$ease: cubic-bezier(0.770, 0.000, 0.175, 1.000); //animation easing
+$loops: 100; //divider for setting delays
+
+$thick: 0.25rem; //shadow offset
+$blur: 0rem; //shadow blur
+$spread: 0.4rem; //shadow spread
+$radius: 20rem; // border-radius
+
+//START
+
+$back: $black;
+$color: $white;
+$base: 1vh;
+
+position: absolute;
+z-index: -1;
+
+.ring {
+  position: absolute;
+  top: calc(50% - 25rem);
+  left: calc(50% - 25rem);
+  width: 50rem;
+  height: 50rem;
+  animation: spin $time infinite alternate $ease;
+  
+  &:nth-child(1 ){animation-delay: -$time * calc(1/$loops)}
+  &:nth-child(2 ){animation-delay: -$time * calc(2/$loops)}
+  &:nth-child(3 ){animation-delay: -$time * calc(3/$loops)}
+  &:nth-child(4 ){animation-delay: -$time * calc(4/$loops)}
+  &:nth-child(5 ){animation-delay: -$time * calc(5/$loops)}
+  &:nth-child(6 ){animation-delay: -$time * calc(6/$loops)}
+  &:nth-child(7 ){animation-delay: -$time * calc(7/$loops)}
+  &:nth-child(8 ){animation-delay: -$time * calc(8/$loops)}
+  &:nth-child(9 ){animation-delay: -$time * calc(9/$loops)}
+  &:nth-child(10){animation-delay: -$time * calc(10/$loops)}
+  &:nth-child(11){animation-delay: -$time * calc(11/$loops)}
+  &:nth-child(12){animation-delay: -$time * calc(12/$loops)}
+  &:nth-child(13){animation-delay: -$time * calc(13/$loops)}
+  &:nth-child(14){animation-delay: -$time * calc(14/$loops)}
+  &:nth-child(15){animation-delay: -$time * calc(15/$loops)}
+  &:nth-child(16){animation-delay: -$time * calc(16/$loops)}
+  &:nth-child(17){animation-delay: -$time * calc(17/$loops)}
+  &:nth-child(18){animation-delay: -$time * calc(18/$loops)}
+  &:nth-child(19){animation-delay: -$time * calc(19/$loops)}
+  &:nth-child(20){animation-delay: -$time * calc(20/$loops)}
+  
+  
+  &:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: $radius;
+    box-shadow: -$thick 0rem $blur $spread $color;
+  }
+  &:nth-child(1 ):after{transform: scale(1.00);}
+  &:nth-child(2 ):after{transform: scale(0.95);}
+  &:nth-child(3 ):after{transform: scale(0.90);}
+  &:nth-child(4 ):after{transform: scale(0.85);}
+  &:nth-child(5 ):after{transform: scale(0.80);}
+  &:nth-child(6 ):after{transform: scale(0.75);}
+  &:nth-child(7 ):after{transform: scale(0.70);}
+  &:nth-child(8 ):after{transform: scale(0.65);}
+  &:nth-child(9 ):after{transform: scale(0.60);}
+  &:nth-child(10):after{transform: scale(0.55);}
+  &:nth-child(11):after{transform: scale(0.50);}
+  &:nth-child(12):after{transform: scale(0.45);}
+  &:nth-child(13):after{transform: scale(0.40);}
+  &:nth-child(14):after{transform: scale(0.35);}
+  &:nth-child(15):after{transform: scale(0.30);}
+  &:nth-child(16):after{transform: scale(0.25);}
+  &:nth-child(17):after{transform: scale(0.20);}
+  &:nth-child(18):after{transform: scale(0.15);}
+  &:nth-child(19):after{transform: scale(0.10);}
+  &:nth-child(20):after{transform: scale(0.05);}
+  
+}
+}

@@ -1,0 +1,78 @@
+@use "../core/colors" as *;
+@use "../core/grid" as *;
+@use "../core/mixins" as *;
+@use "../core/transitions" as *;
+
+#social {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 10px auto;
+    max-width: 80vw;
+    padding: 0;
+
+    @include min-width($screen-md-min) {
+        justify-content: center;
+        padding: 0 15px;
+    }
+
+    li {
+        padding: 0;
+
+        @include min-width($screen-md-min) {
+            padding: 0 15px;
+        }
+
+        i {
+            color: $black;
+            font-size: 32px;
+            transition: $transition-color;
+
+            @include min-width($screen-lg-min) {
+                font-size: 40px;
+            }
+
+            &.fa-youtube {
+                &:hover {
+                    color: $youtubeRed !important;
+                }
+            }
+
+            &.fa-spotify {
+                &:hover {
+                    color: $spotifyGreen !important;
+                }
+            }
+
+            &.fa-apple {
+                &:hover {
+                    color: $appleMusicRed !important;
+                }
+            }
+
+            &.fa-facebook {
+                &:hover {
+                    color: $facebookBlue !important;
+                }
+            }
+            
+            &.fa-bandcamp {
+                &:hover {
+                    color: $bandcampGreen !important;
+                }
+            }
+            
+            &.fa-soundcloud {
+                &:hover {
+                    color: $soundcloudOrange !important;
+                }
+            }
+                
+            &.fa-instagram {
+                &:hover {
+                    color: $instagramPurple !important;
+                }
+            }
+        }
+    }
+}

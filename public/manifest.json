@@ -1,0 +1,9 @@
+{
+  "short_name": "Nervous Monks",
+  "name": "Nervous Monks Band",
+  "start_url": ".",
+  "icons": [],
+  "display": "standalone",
+  "theme_color": "#aaf0d1",
+  "background_color": "#ffffff"
+}

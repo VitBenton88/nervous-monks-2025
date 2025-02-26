@@ -1,0 +1,168 @@
+@use "../core/colors" as *;
+@use "../core/grid" as *;
+@use "../core/mixins" as *;
+
+.App {
+    overflow: hidden;
+    min-height: 100vh;
+    
+    &.regular {
+        background-color: $white;
+    }
+    
+    &.neon, &.red, &.vortex {
+        background-color: $black;
+        position: relative;
+        z-index: 1;
+    }
+
+    &.regular, &.red, &.vortex  {
+        img.nm-logo {
+            max-width: 100%;
+            position: relative;
+            width: 400px;
+            z-index: 5;
+        }
+    }
+
+    &.vortex, &.neon, &.trippy {
+        h1, h2, h3, h4, h5, a, p, i, span, li {
+            color: $white !important;
+        }
+    }
+
+    &.neon, &.trippy {
+        position: relative;
+    }
+
+    &.red {
+        h1, h2, h3, h4, h5, a, p, i, span, li {
+            color: $coral !important;
+        }
+
+        iframe {
+            border: 2px solid $coral;
+        }
+
+        h2 a {
+            color: $green !important;
+        }
+    }
+
+    &.eighties {
+        background-image: url('/eighties.jpeg');
+        background-position: center;
+        background-size: cover;
+        padding-top: 50px;
+
+        h1, #social i {
+            background-image: linear-gradient($pink 0%,  $light_pink 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 2px 20px $dark_pink);
+        }
+
+        h1 {
+            animation: grow_eighties_header .5s forwards .5s;
+            font-size: 70px;
+            font-family: 'Permanent Marker', cursive;
+            font-variant: small-caps;
+            line-height: 1;
+            position: relative;
+            transform: skew(-15deg,-15deg) scale(0);
+
+            @include min-width($screen-md-min) {
+                font-size: 80px;
+            }
+        }
+
+        h2 a {
+            color: $turquoise;
+            font-family: 'VT323';
+            font-size: 50px;
+        }
+
+        #social {
+            margin-top: 50px;
+
+            @include min-width($screen-md-min) {
+                margin-top: 100px;
+            }
+
+            i {
+                transition: .3s;
+
+                &:hover {
+                    background-image: linear-gradient($light_pink 0%,  $pink 100%);
+                }
+            }
+        }
+    }
+
+    &.neon {
+        h1, h2, h3, h4, h5, a, p, i, span, li {
+            text-shadow: $neon_purple;
+        }
+
+        iframe {
+            box-shadow: $neon_purple;
+        }
+    }
+
+    &.vortex {
+        img.nm-logo {
+            animation: pulsate 4s infinite;
+        }
+    }
+
+    &.trippy {
+        h2 a, #social li {
+            background: $black;
+
+            &, i {
+                color: $dark_pink !important;
+                transition: .3s;
+            }
+
+            &:hover {
+                background: $yellow;
+            }
+        }
+
+        h2 a {
+            border-radius: 10px;
+            color: $dark_pink !important;
+            font-family: 'Monoton', cursive;
+            font-size: 36px;
+            padding: 0 20px;
+            text-decoration: none !important;
+
+            &:hover {
+                background: $yellow;
+            }
+        }
+
+        #social li {
+            padding: 11px;
+            background: $black;
+            border-radius: 100%;
+
+            &:not(:last-of-type) {
+                @include min-width($screen-sm-min) {
+                    margin-right: 10px;
+                }
+            }
+            
+            i {
+                @include max-width($screen-sm-max) {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        img.nm-logo {
+            max-width: 100%;
+            width: 600px;
+        }
+    }
+}
