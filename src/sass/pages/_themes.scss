@@ -164,5 +164,16 @@
             max-width: 100%;
             width: 600px;
         }
+
+        .events .list {
+            background-color: $black;
+            border-radius: 25px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+
+            h3 a:hover {
+                color: $yellow !important
+            }
+        }
     }
 }
