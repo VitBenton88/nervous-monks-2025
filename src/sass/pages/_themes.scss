@@ -8,6 +8,10 @@
     
     &.regular {
         background-color: $white;
+
+        .noEvents {
+            color: $black;
+        }
     }
     
     &.neon, &.red, &.vortex {
@@ -76,7 +80,7 @@
             }
         }
 
-        h2 a {
+        h2 a, .noEvents {
             color: $turquoise;
             font-family: 'VT323';
             font-size: 50px;
@@ -96,6 +100,10 @@
                     background-image: linear-gradient($light_pink 0%,  $pink 100%);
                 }
             }
+        }
+
+        .noEvents {
+            font-size: 24px;
         }
     }
 

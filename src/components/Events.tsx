@@ -40,7 +40,7 @@ const Events: React.FC = (): React.ReactNode => {
 
     if (!futureEvents.length) {
         return (
-            <p>Sorry, nothing is currently booked. Check back later.</p>
+            <p className='noEvents'>Sorry, nothing is currently booked. Check back later.</p>
         );
     }
 
