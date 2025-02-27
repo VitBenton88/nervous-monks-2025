@@ -9,7 +9,7 @@ interface EventItem {
 
 const eventData: EventItem[] = [
     {
-        date: new Date("03-23-2025"),
+        date: new Date("2025-03-23"),
         href: "https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179",
         label: "Sundaze Music & Arts Festival",
     },
