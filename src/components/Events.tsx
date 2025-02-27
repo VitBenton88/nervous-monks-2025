@@ -27,10 +27,11 @@ const Events: React.FC = (): React.ReactNode => {
     // Filter out past events
     const futureEvents = useMemo(() => {
         const now = new Date();
+        now.setHours(0, 0, 0, 0);
 
         return eventData.filter(event => {
             const eventDate = new Date(event.date);
-            eventDate.setHours(23, 59, 59, 999); // end of the day (23:59:59.999)
+            eventDate.setHours(24, 59, 59, 999);
 
             // Keep the event if its end-of-day is now or in the future
             return eventDate >= now;
