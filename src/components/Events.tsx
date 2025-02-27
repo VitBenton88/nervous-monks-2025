@@ -18,7 +18,7 @@ const eventData: EventItem[] = [
 const Events: React.FC = (): React.ReactNode => {
     const getDateForPrint = (date: Date): string => {
         const month = date.getMonth() + 1;
-        const day = date.getDate();
+        const day = date.getDate() + 1;
         const year = date.getFullYear().toString().slice(-2);
         
         return `${month}.${day}.${year}`;
