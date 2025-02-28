@@ -109,6 +109,12 @@
 
         #web-badges {
             margin-top: 15px;
+
+            img {
+                @include max-width($screen-md-max) {
+                    max-width: 50px;
+                }
+            }
         }
 
         #social {
