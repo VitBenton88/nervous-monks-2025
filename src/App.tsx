@@ -59,16 +59,20 @@ const App: React.FC = (): React.ReactNode => {
 			header: <img className="nm-logo" src={VortexLogo} alt={header_text} />
 		},
 	];
+	// State
 	const [selectedThemeIndex, setSelectedThemeIndex] = useState(0);
+	const [loading, setLoading] = useState(true);
+	// Computed Values
+	const selectRandomTheme = useCallback(() => setSelectedThemeIndex(Math.floor(Math.random() * themes.length)), [themes]);
+	const isGeoTheme = useMemo(() => themes[selectedThemeIndex].name === 'geo', [selectedThemeIndex]);
+	const { header, name, element } = useMemo(() => themes[selectedThemeIndex], [selectedThemeIndex]);
 
 	useEffect(() => {
 		selectRandomTheme();
+		setLoading(false);
 	}, []);
 
-	const selectRandomTheme = useCallback(() => setSelectedThemeIndex(Math.floor(Math.random() * themes.length)), [themes]);
-	const isGeoTheme = useMemo(() => themes[selectedThemeIndex].name === 'geo', [selectedThemeIndex]);
-	const selectedTheme = useMemo(() => themes[selectedThemeIndex], [selectedThemeIndex]);
-	const { header, name, element } = selectedTheme;
+	if (loading) return (<div></div>)
 
 	return (
 		<div id="home" className={`App ${name}`}>
