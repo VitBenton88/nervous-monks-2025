@@ -3,11 +3,12 @@ import Events from './components/Events'
 import Particles from './components/Particles'
 import Social from './components/Social'
 import YoutubeEmbed from './components/YoutubeEmbed'
+import WebBadges from './components/WebBadges'
 import Vortex from './components/Vortex'
 import Orb from './components/Orb'
 import RedLogo from './assets/logo-red.png'
 import NormalLogo from './assets/logo-regular.png'
-import React from 'react';
+import React, { useMemo, useEffect, useState, useCallback } from 'react';
 import VortexLogo from './assets/logo-vortex.png'
 import TrippyLogo from './assets/logo-trippy.png'
 import Trippy from './components/Trippy'
@@ -25,6 +26,11 @@ const App: React.FC = (): React.ReactNode => {
 			name: 'regular',
 			element: null,
 			header: <img className="nm-logo" src={NormalLogo} alt={header_text} />
+		},
+		{
+			name: 'geo',
+			element: <WebBadges/>,
+			header: <h1>{header_text}</h1>
 		},
 		{
 			name: 'neon',
@@ -51,24 +57,49 @@ const App: React.FC = (): React.ReactNode => {
 			element: <Vortex />,
 			header: <img className="nm-logo" src={VortexLogo} alt={header_text} />
 		},
-	]
+	];
+	const marqueeMessages = [
+		'The truth is stranger than fiction',
+		'?',
+		'Only the curious will discover',
+		'Welcome to the official homepage of the band Nervous Monks!!1!',
+		'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+		'If a man comes to the door of poetry untouched by the madness of the Muses, believing that technique alone will make him a good poet, he and his sane compositions never reach perfection, but are utterly eclipsed by the performances of the inspired madman.'
+	];
 
-	const { header, name, element } = themes[Math.floor(Math.random() * themes.length)];
+	const [selectedThemeIndex, setSelectedThemeIndex] = useState(0);
+
+	useEffect(() => {
+		selectRandomTheme();
+	}, []);
+
+	const selectRandomTheme = useCallback(() => setSelectedThemeIndex(Math.floor(Math.random() * themes.length)), [themes]);
+	const isGeoTheme = useMemo(() => selectedThemeIndex === 1, [selectedThemeIndex]);
+	const selectedTheme = useMemo(() => themes[selectedThemeIndex], [selectedThemeIndex]);
+	const { header, name, element } = selectedTheme;
 
 	return (
 		<div id="home" className={`App ${name}`}>
+			{isGeoTheme ? <marquee>{marqueeMessages[Math.floor(Math.random() * marqueeMessages.length)]}</marquee> : null }
 			{element}
 			<nav className="container">
 				{header}
-				<Social />
-				<h2 className="cta"><a href="mailto:nervousmonks@gmail.com">Contact</a></h2>
-				<h2 className="cta"><a href="https://www.teepublic.com/user/nervous-monks" target="_blank" rel="noreferrer">Merchandise</a></h2>
+				<Social useIcons={!isGeoTheme} />
+				<address>
+					<h2 className="cta"><a href="mailto:nervousmonks@gmail.com">Contact</a></h2>
+					{isGeoTheme ? <img className="gif" src="/emailme.gif" /> : null }
+				</address>
+				<div className="merch">
+					<h2 className="cta"><a href="https://www.teepublic.com/user/nervous-monks" target="_blank" rel="noreferrer">Merchandise</a></h2>
+					{isGeoTheme ? <img className="gif" src="/mchammer.gif" /> : null }
+				</div>
 			</nav>
 			<section className="container events mt-5">
 				<div className="row justify-content-center">
 					<div className="col-12 col-md-8 list">
 						<h2 className="mb-3">Events:</h2>
 						<Events />
+						{isGeoTheme ? <img className="gif" src="/flames.gif" /> : null }
 					</div>
 				</div>
 			</section>
@@ -85,6 +116,7 @@ const App: React.FC = (): React.ReactNode => {
 						<iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/448310646&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" title="SoundCloud Player" width="100%" height="450" scrolling="no" frameBorder="no" allow="autoplay"></iframe>
 					</div>
 				</div>
+				{isGeoTheme ? <img className="counter" src="/counter.gif" /> : null }
 			</section>
 		</div>
 	)
