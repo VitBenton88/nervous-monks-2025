@@ -83,11 +83,11 @@ const App: React.FC = (): React.ReactNode => {
 				<Social useIcons={!isGeoTheme} />
 				<address>
 					<h2 className="cta"><a href="mailto:nervousmonks@gmail.com">Contact</a></h2>
-					{isGeoTheme ? <img className="gif" src="/emailme.gif" /> : null }
+					{isGeoTheme ? <img className="gif" alt="email animation" src="/emailme.gif" /> : null }
 				</address>
 				<div className="merch">
 					<h2 className="cta"><a href="https://www.teepublic.com/user/nervous-monks" target="_blank" rel="noreferrer">Merchandise</a></h2>
-					{isGeoTheme ? <img className="gif" src="/mchammer.gif" /> : null }
+					{isGeoTheme ? <img className="gif" src="/mchammer.gif" alt="mc hammer animation"  /> : null }
 				</div>
 			</nav>
 			<section className="container events mt-5">
@@ -95,7 +95,7 @@ const App: React.FC = (): React.ReactNode => {
 					<div className="col-12 col-md-8 list">
 						<h2 className="mb-3">Events:</h2>
 						<Events />
-						{isGeoTheme ? <img className="gif" src="/flames.gif" /> : null }
+						{isGeoTheme ? <img className="gif" src="/flames.gif" alt="flames animation" /> : null }
 					</div>
 				</div>
 			</section>
@@ -112,7 +112,7 @@ const App: React.FC = (): React.ReactNode => {
 						<iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/448310646&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" title="SoundCloud Player" width="100%" height="450" scrolling="no" frameBorder="no" allow="autoplay"></iframe>
 					</div>
 				</div>
-				{isGeoTheme ? <img className="counter" src="/counter.gif" /> : null }
+				{isGeoTheme ? <img className="counter" src="/counter.gif" alt="counter animation" /> : null }
 			</section>
 		</div>
 	)
