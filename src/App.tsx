@@ -12,6 +12,7 @@ import React, { useMemo, useEffect, useState, useCallback } from 'react';
 import VortexLogo from './assets/logo-vortex.png'
 import TrippyLogo from './assets/logo-trippy.png'
 import Trippy from './components/Trippy'
+import Marquee from './components/Marquee'
 
 interface ThemeItem {
 	name: string;
@@ -58,15 +59,6 @@ const App: React.FC = (): React.ReactNode => {
 			header: <img className="nm-logo" src={VortexLogo} alt={header_text} />
 		},
 	];
-	const marqueeMessages = [
-		'The truth is stranger than fiction',
-		'?',
-		'Only the curious will discover',
-		'Welcome to the official homepage of the band Nervous Monks!!1!',
-		'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-		'If a man comes to the door of poetry untouched by the madness of the Muses, believing that technique alone will make him a good poet, he and his sane compositions never reach perfection, but are utterly eclipsed by the performances of the inspired madman.'
-	];
-
 	const [selectedThemeIndex, setSelectedThemeIndex] = useState(0);
 
 	useEffect(() => {
@@ -80,7 +72,7 @@ const App: React.FC = (): React.ReactNode => {
 
 	return (
 		<div id="home" className={`App ${name}`}>
-			{isGeoTheme ? <div className="marquee"><span>{marqueeMessages[Math.floor(Math.random() * marqueeMessages.length)]}</span></div> : null }
+			{isGeoTheme ? <Marquee /> : null }
 			{element}
 			<nav className="container">
 				{header}
