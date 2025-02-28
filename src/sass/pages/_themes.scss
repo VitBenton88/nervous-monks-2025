@@ -1,3 +1,4 @@
+@use "../core/animations" as *;
 @use "../core/colors" as *;
 @use "../core/grid" as *;
 @use "../core/mixins" as *;
@@ -55,12 +56,27 @@
 
     &.geo {
         background-image: url('/microfab.gif');
+          
+          .marquee{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+          
+            span {
+              text-transform: uppercase;
+              will-change: transform;
+              transform: translateX(0);
+              white-space: nowrap;
+              animation: marquee 25s linear infinite;
+            }
+          }
         
-        h1, h2, h3, h4, h5, marquee, a, p, li {
+        h1, h2, h3, h4, h5, span, a, p, li {
             font-family: "Comic Sans MS", "Comic Sans", cursive;
         }
 
-        marquee, p {
+        marquee, p, span {
             color: yellow;
         }
 

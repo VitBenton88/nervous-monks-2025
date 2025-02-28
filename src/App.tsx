@@ -80,7 +80,7 @@ const App: React.FC = (): React.ReactNode => {
 
 	return (
 		<div id="home" className={`App ${name}`}>
-			{isGeoTheme ? <marquee>{marqueeMessages[Math.floor(Math.random() * marqueeMessages.length)]}</marquee> : null }
+			{isGeoTheme ? <div className="marquee"><span>{marqueeMessages[Math.floor(Math.random() * marqueeMessages.length)]}</span></div> : null }
 			{element}
 			<nav className="container">
 				{header}
