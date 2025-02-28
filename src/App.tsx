@@ -21,12 +21,12 @@ interface ThemeItem {
 }
 
 const App: React.FC = (): React.ReactNode => {
-	const header_text = "Nervous Monks" as string;
+	const header_text = 'Nervous Monks' as string;
 	const themes: ThemeItem[] = [
 		{
 			name: 'regular',
 			element: null,
-			header: <img className="nm-logo" src={NormalLogo} alt={header_text} />
+			header: <img className='nm-logo' src={NormalLogo} alt={header_text} />
 		},
 		{
 			name: 'geo',
@@ -44,19 +44,19 @@ const App: React.FC = (): React.ReactNode => {
 			header: <h1>{header_text}</h1>
 		},
 		{
-			name: "trippy",
+			name: 'trippy',
 			element: <Trippy />,
-			header: <img className="nm-logo" src={TrippyLogo} alt={header_text} />
+			header: <img className='nm-logo' src={TrippyLogo} alt={header_text} />
 		},
 		{
-			name: "red",
+			name: 'red',
 			element: <Orb />,
-			header: <img className="nm-logo" src={RedLogo} alt={header_text} />
+			header: <img className='nm-logo' src={RedLogo} alt={header_text} />
 		},
 		{
-			name: "vortex",
+			name: 'vortex',
 			element: <Vortex />,
-			header: <img className="nm-logo" src={VortexLogo} alt={header_text} />
+			header: <img className='nm-logo' src={VortexLogo} alt={header_text} />
 		},
 	];
 	// State
@@ -75,44 +75,44 @@ const App: React.FC = (): React.ReactNode => {
 	if (loading) return (<div></div>)
 
 	return (
-		<div id="home" className={`App ${name}`}>
+		<div id='home' className={`App ${name}`}>
 			{isGeoTheme ? <Marquee /> : null }
 			{element}
-			<nav className="container ctas">
+			<nav className='container ctas'>
 				{header}
 				<Social useIcons={!isGeoTheme} />
 				<address>
-					<h2 className="cta"><a href="mailto:nervousmonks@gmail.com">Contact</a></h2>
-					{isGeoTheme ? <img className="gif" alt="email animation" src="/emailme.gif" /> : null }
+					<h2 className='cta'><a href='mailto:nervousmonks@gmail.com'>Contact</a></h2>
+					{isGeoTheme ? <img className='gif' alt='email animation' src='/emailme.gif' /> : null }
 				</address>
-				<div className="merch">
-					<h2 className="cta"><a href="https://www.teepublic.com/user/nervous-monks" target="_blank" rel="noreferrer">Merchandise</a></h2>
-					{isGeoTheme ? <img className="gif" src="/mchammer.gif" alt="mc hammer animation"  /> : null }
+				<div className='merch'>
+					<h2 className='cta'><a href='https://www.teepublic.com/user/nervous-monks' target='_blank' rel='noreferrer'>Merchandise</a></h2>
+					{isGeoTheme ? <img className='gif' src='/mchammer.gif' alt='mc hammer animation'  /> : null }
 				</div>
 			</nav>
-			<section className="container events mt-5">
-				<div className="row justify-content-center">
-					<div className="col-12 col-md-8 list">
-						<h2 className="mb-3">Events:</h2>
+			<section className='container events mt-5'>
+				<div className='row justify-content-center'>
+					<div className='col-12 col-md-8 list'>
+						<h2 className='mb-3'>Events:</h2>
 						<Events />
-						{isGeoTheme ? <img className="gif" src="/flames.gif" alt="flames animation" /> : null }
+						{isGeoTheme ? <img className='gif' src='/flames.gif' alt='flames animation' /> : null }
 					</div>
 				</div>
 			</section>
-			<section className="container media youtube music-video mt-5">
-				<div className="row">
-					<div className="col-12">
-						<YoutubeEmbed embedId="9XjjFLAchb0" />
+			<section className='container media youtube music-video mt-5'>
+				<div className='row'>
+					<div className='col-12'>
+						<YoutubeEmbed embedId='9XjjFLAchb0' />
 					</div>
 				</div>
 			</section>
-			<section className="container media soundcloud mt-5">
-				<div className="row d-flex justify-content-center">
-					<div className="col-12 col-md-8 col-lg-6">
-						<iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/448310646&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" title="SoundCloud Player" width="100%" height="450" scrolling="no" frameBorder="no" allow="autoplay"></iframe>
+			<section className='container media soundcloud mt-5'>
+				<div className='row d-flex justify-content-center'>
+					<div className='col-12 col-md-8 col-lg-6'>
+						<iframe src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/448310646&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true' title='SoundCloud Player' width='100%' height='450' scrolling='no' frameBorder='no' allow='autoplay'></iframe>
 					</div>
 				</div>
-				{isGeoTheme ? <img className="counter" src="/counter.gif" alt="counter animation" /> : null }
+				{isGeoTheme ? <img className='counter' src='/counter.gif' alt='counter animation' /> : null }
 			</section>
 		</div>
 	)

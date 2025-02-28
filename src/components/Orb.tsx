@@ -8,7 +8,7 @@ const Orb: React.FC = (): React.ReactNode => {
       }
 
     return ( 
-        <div id="red-particles">
+        <div id='red-particles'>
             {particles}
         </div>
     )

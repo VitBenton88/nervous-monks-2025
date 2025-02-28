@@ -1,4 +1,4 @@
-import ParticlesBg from "particles-bg"
+import ParticlesBg from 'particles-bg'
 import React from 'react';
 
 interface BackgroundProps {
@@ -35,9 +35,9 @@ const Particles: React.FC<BackgroundProps> = (): React.ReactNode => {
         alpha: [0.6, 0],
         g: 0,
         scale: [.1, 0.4],
-        position: "all",
-        color: ["#4d4dff"],
-        cross: "dead",
+        position: 'all',
+        color: ['#4d4dff'],
+        cross: 'dead',
         random: 15
     }
 
@@ -58,7 +58,7 @@ const Particles: React.FC<BackgroundProps> = (): React.ReactNode => {
         })
     }
 
-    return (<ParticlesBg type="custom" config={config} bg={true} />)
+    return (<ParticlesBg type='custom' config={config} bg={true} />)
 }
 
 export default Particles;

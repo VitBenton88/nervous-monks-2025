@@ -8,7 +8,7 @@ const Vortex: React.FC = (): React.ReactNode => {
       }
 
     return ( 
-        <div id="vortex">
+        <div id='vortex'>
             {rings}
         </div>
     )

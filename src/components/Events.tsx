@@ -8,10 +8,15 @@ interface EventItem {
 }
 
 const eventData: EventItem[] = [
+    // {
+    //     date: new Date('1969-08-17'),
+    //     href: 'https://www.example.com',
+    //     label: 'Woodstock',
+    // },
     {
-        date: new Date("2025-03-23"),
-        href: "https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179",
-        label: "Sundaze Music & Arts Festival",
+        date: new Date('2025-03-23'),
+        href: 'https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179',
+        label: 'Sundaze Music & Arts Festival',
     },
 ];
 
@@ -49,8 +54,8 @@ const Events: React.FC = (): React.ReactNode => {
             {eventData.length ?
                 eventData.map(({ date, label, href }, index) => (
                     <li key={index}>
-                        <h3 className="cta">
-                            <time dateTime={date.toISOString().slice(0, 10)}>{getDateForPrint(date)}</time> - <a href={href} target="_blank" rel="noreferrer">{label}</a>
+                        <h3 className='cta'>
+                            <time dateTime={date.toISOString().slice(0, 10)}>{getDateForPrint(date)}</time> - <a href={href} target='_blank' rel='noreferrer'>{label}</a>
                         </h3>
                     </li>
                 )) : null}
