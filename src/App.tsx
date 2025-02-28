@@ -74,7 +74,7 @@ const App: React.FC = (): React.ReactNode => {
 		<div id="home" className={`App ${name}`}>
 			{isGeoTheme ? <Marquee /> : null }
 			{element}
-			<nav className="container">
+			<nav className="container ctas">
 				{header}
 				<Social useIcons={!isGeoTheme} />
 				<address>
