@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
 const Marquee: React.FC = (): React.ReactNode => {
-    const marqueeMessages = [
+    const marqueeMessages: string[] = [
         'The truth is stranger than fiction',
         '?',
         'Only the curious will discover',
