@@ -1,21 +1,32 @@
 
 import React, { useMemo } from 'react';
 
+type URLString = string & { __brand: "URLString" };
 interface EventItem {
     date: Date;
-    href: string;
+    href: URLString;
     label: string;
+}
+
+const toURLString = (value: string): URLString => {
+    // Validate that the string is a valid URL
+    try {
+        new URL(value); // This will throw if the URL is invalid
+        return value as URLString; // Type assertion after validation
+    } catch (error) {
+        throw new Error(`Invalid URL: ${value}`);
+    }
 }
 
 const eventData: EventItem[] = [
     // {
     //     date: new Date('1969-08-17'),
-    //     href: 'https://www.example.com',
+    //     href: toURLString('https://www.example.com'),
     //     label: 'Woodstock',
     // },
     {
         date: new Date('2025-03-23'),
-        href: 'https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179',
+        href: toURLString('https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179'),
         label: 'Sundaze Music & Arts Festival',
     },
 ];
