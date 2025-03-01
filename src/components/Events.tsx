@@ -41,7 +41,7 @@ const Events: React.FC = (): React.ReactNode => {
     };
 
     // Filter out past events
-    const futureEvents = useMemo(() => {
+    const futureEvents = useMemo(() : EventItem[] => {
         const now = new Date();
         now.setHours(0, 0, 0, 0);
 

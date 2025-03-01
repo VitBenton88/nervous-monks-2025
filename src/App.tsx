@@ -60,12 +60,12 @@ const App: React.FC = (): React.ReactNode => {
 		},
 	];
 	// State
-	const [selectedThemeIndex, setSelectedThemeIndex] = useState(0);
-	const [loading, setLoading] = useState(true);
+	const [selectedThemeIndex, setSelectedThemeIndex] = useState<number>(0);
+	const [loading, setLoading] = useState<Boolean>(true);
 	// Computed Values
-	const selectRandomTheme = useCallback(() => setSelectedThemeIndex(Math.floor(Math.random() * themes.length)), [themes]);
-	const isGeoTheme = useMemo(() => themes[selectedThemeIndex].name === 'geo', [selectedThemeIndex]);
-	const { header, name, element } = useMemo(() => themes[selectedThemeIndex], [selectedThemeIndex]);
+	const selectRandomTheme = useCallback(() : void => setSelectedThemeIndex(Math.floor(Math.random() * themes.length)), [themes]);
+	const isGeoTheme = useMemo((): Boolean => themes[selectedThemeIndex].name === 'geo', [selectedThemeIndex]);
+	const { header, name, element } = useMemo((): ThemeItem => themes[selectedThemeIndex], [selectedThemeIndex]);
 
 	useEffect(() => {
 		selectRandomTheme();
