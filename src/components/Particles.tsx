@@ -6,7 +6,7 @@ interface BackgroundProps {
     showParticles?: boolean;
 }
 
-  interface Ctx {
+interface Ctx {
     beginPath: Function;
     closePath: Function;
     fill: Function;
