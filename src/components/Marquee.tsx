@@ -12,7 +12,7 @@ const Marquee: React.FC = (): React.ReactNode => {
     const randomlySelectedMessage = useMemo((): string => marqueeMessages[Math.floor(Math.random() * marqueeMessages.length)], [marqueeMessages]);
 
     return ( 
-        <div className='marquee'>
+        <div id='marquee'>
             <span>{randomlySelectedMessage}</span>
         </div>
     )
