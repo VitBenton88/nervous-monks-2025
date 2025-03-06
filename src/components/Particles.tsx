@@ -58,7 +58,7 @@ const Particles: React.FC<BackgroundProps> = (): React.ReactNode => {
         })
     }
 
-    return (<ParticlesBg type='custom' config={config} bg={true} />)
+    return (<ParticlesBg type='custom' config={config} bg />)
 }
 
 export default Particles;
