@@ -20,7 +20,7 @@ const Social: React.FC<SocialProps> = ({ useIcons }): React.ReactNode => {
     {
       href: 'https://music.apple.com/us/artist/nervous-monks/1482596038',
       icon: 'fa-apple',
-      label: 'Apple',
+      label: 'Apple Music',
     },
     {
       href: 'https://music.youtube.com/channel/UChPuHzUFqC0gekc_HbRgluA',
