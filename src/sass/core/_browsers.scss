@@ -6,32 +6,38 @@
 
 .ua-desktop {}
 
-    /**
+/**
      * Chrome (Desktop)
     **/
 
-    .ua-desktop.ua-chrome {
-        // Inputs
-        input[type="email"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"] {
-        	&:-webkit-autofill {
-        		-webkit-box-shadow: 0 0 0px 1000px $white inset;
-        	}
+.ua-desktop.ua-chrome {
+
+    // Inputs
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="url"] {
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px $white inset;
         }
     }
+}
 
-    /**
+/**
      * Firefox (Desktop)
     **/
 
-    .ua-desktop.ua-firefox {
-        // Selects
-        select {
-        	&:-moz-focusring {
-        		color: transparent;
-        		text-shadow: 0 0 0 $black;
-        	}
+.ua-desktop.ua-firefox {
+
+    // Selects
+    select {
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 $black;
         }
     }
+}
 
 /**
  * Mobile
@@ -45,25 +51,26 @@
 
 .ua-android {}
 
-    /**
+/**
      * Chrome (Android)
     **/
 
-    .ua-android.ua-chrome {}
+.ua-android.ua-chrome {}
 
-    /**
+/**
      * Firefox (Android)
     **/
 
-    .ua-android.ua-firefox {
-        // Selects
-        select {
-        	&:-moz-focusring {
-        		color: transparent;
-        		text-shadow: 0 0 0 $black;
-        	}
+.ua-android.ua-firefox {
+
+    // Selects
+    select {
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 $black;
         }
     }
+}
 
 /**
  * iOS
@@ -71,38 +78,38 @@
 
 .ua-ios {}
 
-    /**
+/**
      * Chrome (iOS)
     **/
 
-    .ua-ios.ua-chrome {}
+.ua-ios.ua-chrome {}
 
-    /**
+/**
      * Firefox (iOS)
     **/
 
-    .ua-ios.ua-firefox {}
+.ua-ios.ua-firefox {}
 
-    /**
+/**
      * Safari (iOS)
     **/
 
-    .ua-ios.ua-safari {
-        #admin {
-            .admin-form {
-                label {
-                    display: block;
-                }
-    
-                input {
-                    &#date {
-                        line-height: 32px;
-                        margin: 10px auto 20px;
-                    }
+.ua-ios.ua-safari {
+    #admin {
+        .admin-form {
+            label {
+                display: block;
+            }
+
+            input {
+                &#date {
+                    line-height: 32px;
+                    margin: 10px auto 20px;
                 }
             }
         }
     }
+}
 
 /**
  * macOS
@@ -110,23 +117,23 @@
 
 .ua-mac_os_x {}
 
-    /**
+/**
      * Chrome (macOS)
     **/
 
-    .ua-mac_os_x.ua-chrome {}
+.ua-mac_os_x.ua-chrome {}
 
-    /**
+/**
      * Firefox (macOS)
     **/
 
-    .ua-mac_os_x.ua-firefox {}
+.ua-mac_os_x.ua-firefox {}
 
-    /**
+/**
      * Safari (macOS)
     **/
 
-    .ua-mac_os_x.ua-safari {}
+.ua-mac_os_x.ua-safari {}
 
 /**
  * Windows
@@ -134,33 +141,34 @@
 
 .ua-windows_nt {}
 
-    /**
+/**
      * Chrome (Windows)
     **/
 
-    .ua-windows_nt.ua-chrome {}
+.ua-windows_nt.ua-chrome {}
 
-    /**
+/**
      * Firefox (Windows)
     **/
 
-    .ua-windows_nt.ua-firefox {}
+.ua-windows_nt.ua-firefox {}
 
-    /**
+/**
      * Internet Explorer (Windows)
     **/
 
-    .ua-windows_nt.ua-ie {
-        // Selects
-        select {
-            &::-ms-expand {
-                display: none;
-            }
+.ua-windows_nt.ua-ie {
+
+    // Selects
+    select {
+        &::-ms-expand {
+            display: none;
         }
     }
+}
 
-    /**
+/**
      * Microsoft Edge (Windows)
     **/
 
-    .ua-windows_nt.ua-edge {}
+.ua-windows_nt.ua-edge {}

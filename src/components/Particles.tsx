@@ -7,11 +7,11 @@ interface BackgroundProps {
 }
 
 interface Ctx {
-    beginPath: Function;
-    closePath: Function;
-    fill: Function;
+    beginPath: () => void;
+    closePath: () => void;
+    fill: () => void;
     fillStyle: string;
-    rect: Function;
+    rect: () => void;
 }
 
 interface Particle {

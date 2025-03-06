@@ -13,7 +13,7 @@ const toURLString = (value: string): URLString => {
     try {
         new URL(value); // This will throw if the URL is invalid
         return value as URLString; // Type assertion after validation
-    } catch (error) {
+    } catch {
         throw new Error(`Invalid URL: ${value}`);
     }
 }
@@ -36,12 +36,12 @@ const Events: React.FC = (): React.ReactNode => {
         const month = date.getMonth() + 1;
         const day = date.getDate() + 1;
         const year = date.getFullYear().toString().slice(-2);
-        
+
         return `${month}.${day}.${year}`;
     };
 
     // Filter out past events
-    const futureEvents = useMemo(() : EventItem[] => {
+    const futureEvents = useMemo((): EventItem[] => {
         const now = new Date();
         now.setHours(0, 0, 0, 0);
 

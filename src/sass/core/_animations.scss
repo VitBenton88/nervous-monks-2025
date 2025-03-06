@@ -2,33 +2,39 @@
 
 @keyframes grow_eighties_header {
     from {
-        transform: skew(-15deg,-15deg) scale(0)
+        transform: skew(-15deg, -15deg) scale(0)
     }
+
     to {
-        transform: skew(-15deg,-15deg) scale(1)
+        transform: skew(-15deg, -15deg) scale(1)
     }
 }
 
 @keyframes marquee {
     0% {
-      transform: translateX(100vw);
+        transform: translateX(100vw);
     }
+
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
+}
 
 @keyframes spin {
-    0% { transform: rotate(0deg);
-  }
-    100% { transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes bkg_to_black {
     from {
         background-color: transparent;
     }
+
     to {
         background-color: $black;
     }
@@ -39,6 +45,7 @@
         color: $black;
         text-shadow: none;
     }
+
     to {
         color: #fff;
         text-shadow: $neon_purple;

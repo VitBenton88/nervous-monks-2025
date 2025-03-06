@@ -7,7 +7,7 @@
 .App {
     min-height: 100vh;
     overflow: hidden;
-    
+
     &.regular {
         background-color: $white;
 
@@ -29,14 +29,18 @@
             color: $red
         }
     }
-    
-    &.neon, &.parrot, &.vortex {
+
+    &.neon,
+    &.parrot,
+    &.vortex {
         background-color: $black;
         position: relative;
         z-index: 1;
     }
 
-    &.regular, &.parrot, &.vortex  {
+    &.regular,
+    &.parrot,
+    &.vortex {
         img.nm-logo {
             max-width: 100%;
             position: relative;
@@ -45,23 +49,39 @@
         }
     }
 
-    &.geo, &.neon, &.vortex  {
+    &.geo,
+    &.neon,
+    &.vortex {
         time {
             color: $coral;
         }
     }
 
-    &.vortex, &.neon, &.trippy {
-        h1, h2, h3, h4, h5, a, p, i, span, li {
+    &.vortex,
+    &.neon,
+    &.trippy {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a,
+        p,
+        i,
+        span,
+        li {
             color: $white !important;
         }
     }
 
-    &.neon, &.trippy {
+    &.neon,
+    &.trippy {
         position: relative;
     }
 
-    &.eighties, &.trippy {
+    &.eighties,
+    &.trippy {
         .events {
             padding: 0 1em;
 
@@ -74,7 +94,17 @@
     }
 
     &.parrot {
-        h1, h2, h3, h4, h5, a, p, i, span, li {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a,
+        p,
+        i,
+        span,
+        li {
             color: $coral !important;
         }
 
@@ -82,27 +112,43 @@
             border: 2px solid $coral;
         }
 
-        h2 a, time {
+        h2 a,
+        time {
             color: $green !important;
         }
     }
 
     &.geo {
         background-image: url('/microfab.gif');
-        
-        h1, h2, h3, h4, h5, span, a, p, li {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        span,
+        a,
+        p,
+        li {
             font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
         }
 
-        p, span {
+        p,
+        span {
             color: yellow;
         }
 
-        h1, h2, h3, h4, h5, a {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a {
             color: chartreuse;
         }
 
-        h2 a, .events .list a {
+        h2 a,
+        .events .list a {
             &:hover {
                 color: $coral;
             }
@@ -119,7 +165,8 @@
             margin-left: 15px;
         }
 
-        .merch h2, address h2 {
+        .merch h2,
+        address h2 {
             display: inline-block;
         }
 
@@ -179,8 +226,9 @@
         background-size: cover;
         padding-top: 50px;
 
-        h1, #social i {
-            background-image: linear-gradient($pink 0%,  $light_pink 100%);
+        h1,
+        #social i {
+            background-image: linear-gradient($pink 0%, $light_pink 100%);
             background-clip: text;
             filter: drop-shadow(2px 2px 20px $dark_pink);
             -webkit-text-fill-color: transparent;
@@ -193,18 +241,19 @@
             font-variant: small-caps;
             line-height: 1;
             position: relative;
-            transform: skew(-15deg,-15deg) scale(0);
+            transform: skew(-15deg, -15deg) scale(0);
 
             @include min-width($screen-md-min) {
                 font-size: 80px;
             }
         }
 
-        time { 
+        time {
             color: $dark_pink;
         }
 
-        h2 a, .noEvents {
+        h2 a,
+        .noEvents {
             color: $turquoise;
             font-family: 'VT323';
             font-size: 50px;
@@ -225,8 +274,18 @@
 
             i {
                 &:hover {
-                    background-image: linear-gradient($light_pink 0%,  $pink 100%);
+                    background-image: linear-gradient($light_pink 0%, $pink 100%);
                 }
+            }
+        }
+
+        .events {
+
+            time,
+            h2,
+            a {
+                font-family: 'VT323';
+                font-size: 2rem;
             }
         }
 
@@ -244,7 +303,17 @@
     }
 
     &.neon {
-        h1, h2, h3, h4, h5, a, p, i, span, li {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a,
+        p,
+        i,
+        span,
+        li {
             text-shadow: $neon_purple;
         }
 
@@ -262,7 +331,8 @@
             animation: pulsate 4s infinite;
         }
 
-        h2 a, .events .list a {
+        h2 a,
+        .events .list a {
             &:hover {
                 color: $coral !important;
             }
@@ -270,7 +340,9 @@
     }
 
     &.trippy {
-        h2 a, #social li {
+
+        h2 a,
+        #social li {
             background: $black;
             transition: $transition-bkg;
 
@@ -279,13 +351,20 @@
             }
         }
 
-        h2 a, i, time {
+        h2 a,
+        i,
+        time {
             color: $dark_pink !important;
+        }
+
+        h2,
+        a,
+        time {
+            font-family: 'Monoton', cursive;
         }
 
         h2 a {
             border-radius: 10px;
-            font-family: 'Monoton', cursive;
             font-size: 36px;
             padding: 0 20px;
             text-decoration: none !important;
@@ -305,7 +384,7 @@
                     margin-right: 10px;
                 }
             }
-            
+
             i {
                 @include max-width($screen-sm-max) {
                     font-size: 26px;

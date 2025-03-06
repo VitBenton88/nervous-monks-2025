@@ -22,7 +22,7 @@ interface ThemeItem {
 
 const App: React.FC = (): React.ReactNode => {
 	const header_text = 'Nervous Monks' as string;
-	const themes: ThemeItem[] = [
+	const themes = useMemo((): ThemeItem[] => [
 		{
 			name: 'regular',
 			element: null,
@@ -58,19 +58,19 @@ const App: React.FC = (): React.ReactNode => {
 			element: <Vortex />,
 			header: <img className='nm-logo' src={VortexLogo} alt={header_text} />
 		},
-	];
+	], []);
 	// State
 	const [selectedThemeIndex, setSelectedThemeIndex] = useState<number>(0);
-	const [loading, setLoading] = useState<Boolean>(true);
+	const [loading, setLoading] = useState<boolean>(true);
 	// Computed Values
 	const selectRandomTheme = useCallback((): void => setSelectedThemeIndex(Math.floor(Math.random() * themes.length)), [themes]);
-	const isGeoTheme = useMemo((): Boolean => themes[selectedThemeIndex].name === 'geo', [selectedThemeIndex]);
-	const { header, name, element } = useMemo((): ThemeItem => themes[selectedThemeIndex], [selectedThemeIndex]);
+	const isGeoTheme = useMemo((): boolean => themes[selectedThemeIndex].name === 'geo', [selectedThemeIndex, themes]);
+	const { header, name, element } = useMemo((): ThemeItem => themes[selectedThemeIndex], [selectedThemeIndex, themes]);
 
 	useEffect(() => {
 		selectRandomTheme();
 		setLoading(false);
-	}, []);
+	}, [selectRandomTheme]);
 
 	if (loading) return (<div></div>)
 

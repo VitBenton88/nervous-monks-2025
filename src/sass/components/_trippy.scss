@@ -6,45 +6,46 @@
     position: absolute;
     overflow: hidden;
     z-index: -1;
-    
+
     body:hover .box {
         animation-play-state: paused;
     }
-    
+
     .box {
         position: absolute;
         margin: auto;
-        width:150vw;
-        height:400vh;
-        left:-25%;
-        top:0; bottom:0;
+        width: 150vw;
+        height: 400vh;
+        left: -25%;
+        top: 0;
+        bottom: 0;
         mix-blend-mode: darken;
         animation: trippy_rotate 2.5s ease-in-out infinite alternate;
 
         &.yellow {
             background-image: radial-gradient($yellow 50%, transparent 54%);
-            background-size:30px 30px;
+            background-size: 30px 30px;
             background-position: center;
             transform: rotate(0);
         }
-        
+
         &.turquoise {
             background-image: radial-gradient($turquoise 50%, transparent 54%);
-            background-size:30px 30px;
+            background-size: 30px 30px;
             background-position: center;
             transform: rotate(15deg);
         }
-        
+
         &.black {
             background-image: radial-gradient($black 50%, transparent 54%);
-            background-size:30px 30px;
+            background-size: 30px 30px;
             background-position: center;
             transform: rotate(45deg);
         }
-        
+
         &.pink {
             background-image: radial-gradient($pink 50%, transparent 54%);
-            background-size:30px 30px;
+            background-size: 30px 30px;
             background-position: center;
             transform: rotate(75deg);
         }

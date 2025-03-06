@@ -2,7 +2,8 @@
 @use "../core/fonts" as *;
 @use "../core/transitions" as *;
 
-input, button {
+input,
+button {
     font-family: $questrial;
     font-size: 16px;
     line-height: 16px;
@@ -25,21 +26,21 @@ button.button {
     user-select: none;
     text-transform: uppercase;
     transition: $transition-opacity;
-    
+
     &:hover {
         opacity: 0.5;
     }
 
-    &:active { 
+    &:active {
         background-color: none;
         border: none;
-      }
+    }
 }
 
 i.button {
     opacity: 0.5;
     transition: $transition-opacity;
-    
+
     &:hover {
         opacity: 1;
     }

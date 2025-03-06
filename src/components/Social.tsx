@@ -52,7 +52,7 @@ const Social: React.FC<SocialProps> = ({ useIcons }): React.ReactNode => {
   const renderLinks = ({ href, icon, label }: SocialItem): React.ReactNode => (
     <li key={icon} className='d-inline-block'>
       <a href={href} target='_blank' rel='noreferrer'>
-        {useIcons ? (<i className={`fab ${icon}`}></i>) : label }
+        {useIcons ? (<i className={`fab ${icon}`}></i>) : label}
       </a>
     </li>
   );

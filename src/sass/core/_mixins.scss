@@ -4,44 +4,44 @@
 
 @mixin min-and-max-height($min-size, $max-size) {
 	@media only screen and (min-height: $min-size + px) and (max-height: $max-size + px) {
-        @content;
-    }
+		@content;
+	}
 }
 
 @mixin min-and-max-width($min-size, $max-size) {
 	@media only screen and (min-width: $min-size + px) and (max-width: $max-size + px) {
-        @content;
-    }
+		@content;
+	}
 }
 
 @mixin min-height($size) {
 	@media only screen and (min-height: $size + px) {
-        @content;
-    }
+		@content;
+	}
 }
 
 @mixin min-width($size) {
 	@media only screen and (min-width: $size + px) {
-        @content;
-    }
+		@content;
+	}
 }
 
 @mixin min-width-and-max-height($min-width, $max-height) {
 	@media only screen and (min-width: $min-width + px) and (max-height: $max-height + px) {
-        @content;
-    }
+		@content;
+	}
 }
 
 @mixin max-height($size) {
 	@media only screen and (max-height: $size + px) {
-        @content;
-    }
+		@content;
+	}
 }
 
 @mixin max-width($size) {
 	@media only screen and (max-width: $size + px) {
-        @content;
-    }
+		@content;
+	}
 }
 
 @mixin landscape() {
