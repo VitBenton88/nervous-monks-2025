@@ -1,5 +1,6 @@
 @use "colors" as *;
 @use "fonts" as *;
+@use "../core/transitions" as *;
 
 p, span, li, label {
     color: $grey;
@@ -8,6 +9,7 @@ p, span, li, label {
 
 a {
     color: $black;
+    transition: $transition-color;
     text-decoration: none;
 }
 
