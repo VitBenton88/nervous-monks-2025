@@ -11,7 +11,7 @@ interface Ctx {
     closePath: () => void;
     fill: () => void;
     fillStyle: string;
-    rect: () => void;
+    rect: (x: number, y: number, radius: number, secondRadius: number) => void;
 }
 
 interface Particle {
