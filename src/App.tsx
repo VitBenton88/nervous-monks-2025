@@ -6,7 +6,7 @@ import YoutubeEmbed from './components/YoutubeEmbed'
 import WebBadges from './components/WebBadges'
 import Vortex from './components/Vortex'
 import Orb from './components/Orb'
-import RedLogo from './assets/logo-red.png'
+import ParrotLogo from './assets/logo-parrot.png'
 import NormalLogo from './assets/logo-regular.png'
 import React, { useMemo, useEffect, useState, useCallback } from 'react';
 import VortexLogo from './assets/logo-vortex.png'
@@ -49,9 +49,9 @@ const App: React.FC = (): React.ReactNode => {
 			header: <img className='nm-logo' src={TrippyLogo} alt={header_text} />
 		},
 		{
-			name: 'red',
+			name: 'parrot',
 			element: <Orb />,
-			header: <img className='nm-logo' src={RedLogo} alt={header_text} />
+			header: <img className='nm-logo' src={ParrotLogo} alt={header_text} />
 		},
 		{
 			name: 'vortex',

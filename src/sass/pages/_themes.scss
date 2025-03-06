@@ -4,8 +4,8 @@
 @use "../core/mixins" as *;
 
 .App {
-    overflow: hidden;
     min-height: 100vh;
+    overflow: hidden;
     
     &.regular {
         background-color: $white;
@@ -15,13 +15,13 @@
         }
     }
     
-    &.neon, &.red, &.vortex {
+    &.neon, &.parrot, &.vortex {
         background-color: $black;
         position: relative;
         z-index: 1;
     }
 
-    &.regular, &.red, &.vortex  {
+    &.regular, &.parrot, &.vortex  {
         img.nm-logo {
             max-width: 100%;
             position: relative;
@@ -40,7 +40,7 @@
         position: relative;
     }
 
-    &.red {
+    &.parrot {
         h1, h2, h3, h4, h5, a, p, i, span, li {
             color: $coral !important;
         }
@@ -49,7 +49,7 @@
             border: 2px solid $coral;
         }
 
-        h2 a {
+        h2 a, time {
             color: $green !important;
         }
     }
@@ -106,21 +106,21 @@
             margin: 30px auto;
 
             li a {
-                border-width: 6px;
-                border-style: ridge;
-                border-color: rgb(187, 187, 187);
-                font-size: 16px;
-                line-height: 20px;
-                color: rgb(51, 51, 51);
-                text-align: center;
-                text-shadow: rgba(255, 255, 255, 0.75) 0px 1px 1px;
-                vertical-align: middle;
-                cursor: pointer;
                 background-color: rgb(230, 230, 230);
                 background-image: linear-gradient(rgb(230, 230, 230), rgb(230, 230, 230));
                 background-repeat: repeat-x;
                 box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.05) 0px 1px 2px;
+                border-width: 6px;
+                border-style: ridge;
+                border-color: rgb(187, 187, 187);
+                color: rgb(51, 51, 51);
+                cursor: pointer;
+                font-size: 16px;
+                line-height: 20px;
                 padding: 4px 12px;
+                text-align: center;
+                text-shadow: rgba(255, 255, 255, 0.75) 0px 1px 1px;
+                vertical-align: middle;
             }
 
             @include max-width($screen-md-max) {
@@ -142,8 +142,8 @@
         h1, #social i {
             background-image: linear-gradient($pink 0%,  $light_pink 100%);
             background-clip: text;
-            -webkit-text-fill-color: transparent;
             filter: drop-shadow(2px 2px 20px $dark_pink);
+            -webkit-text-fill-color: transparent;
         }
 
         h1 {
