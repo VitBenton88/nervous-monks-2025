@@ -29,6 +29,11 @@ const eventData: EventItem[] = [
         href: toURLString('https://www.eventbrite.com/e/sundaze-music-arts-fest-tickets-1225604208179'),
         label: 'Sundaze Music & Arts Festival',
     },
+    {
+        date: new Date('2025-05-31'),
+        href: toURLString('https://www.eventbrite.com/e/nervous-monks-as-you-like-it-album-release-tickets-1298104949849'),
+        label: '"As You Like It" Album Release',
+    },
 ];
 
 const Events: React.FC = (): React.ReactNode => {
