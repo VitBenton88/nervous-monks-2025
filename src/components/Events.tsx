@@ -26,7 +26,7 @@ const eventData: EventItem[] = [
     // },
     {
         date: new Date('2025-05-31'),
-        href: toURLString('https://www.eventbrite.com/e/nervous-monks-as-you-like-it-album-release-tickets-1298104949849'),
+        href: toURLString('https://www.eventbrite.com/e/nervous-monks-live-at-revelry-as-you-like-it-album-release-party-tickets-1301621156919'),
         label: '"As You Like It" Album Release',
     },
 ];
