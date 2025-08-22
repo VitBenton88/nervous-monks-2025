@@ -25,8 +25,8 @@ const eventData: EventItem[] = [
 	//     label: 'Woodstock',
 	// },
 	{
-		date: new Date('2025-10-05'),
-		href: toURLString('https://www.eventbrite.com/e/nervous-monks-live-at-revelry-as-you-like-it-album-release-party-tickets-1301621156919'),
+		date: new Date('2025-10-03'),
+		href: toURLString('https://revelryfla.com/calendar/'),
 		label: 'Live At Revelry',
 	},
 ];
