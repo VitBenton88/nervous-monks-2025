@@ -4,7 +4,7 @@ interface YoutubeEmbedProps {
     embedId?: string;
 }
 
-const YoutubeEmbed: React.FC<YoutubeEmbedProps> = ({ embedId = '9XjjFLAchb0' }): React.ReactNode => {
+const YoutubeEmbed: React.FC<YoutubeEmbedProps> = ({ embedId = 'zmBJqIXI8Ps' }): React.ReactNode => {
     return (
         <iframe
             width='560'

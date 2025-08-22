@@ -102,7 +102,7 @@ const App: React.FC = (): React.ReactNode => {
 			<section className='container media youtube music-video mt-5'>
 				<div className='row'>
 					<div className='col-12'>
-						<YoutubeEmbed embedId='9XjjFLAchb0' />
+						<YoutubeEmbed />
 					</div>
 				</div>
 			</section>
