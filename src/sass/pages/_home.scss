@@ -22,9 +22,8 @@
 			margin-top: 1em;
 		}
 
-		a::after {
-			content: '\279A';
-			display: inline-block;
+		a span {
+			color: inherit;
 			position: relative;
 			left: 4px;
 			top: -3px;

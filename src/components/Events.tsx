@@ -66,7 +66,7 @@ const Events: React.FC = (): React.ReactNode => {
 				eventData.map(({ date, label, href }, index) => (
 					<li key={index}>
 						<h3 className='cta'>
-							<time dateTime={date.toISOString().slice(0, 10)}>{getDateForPrint(date)}</time> - <a href={href} target='_blank' rel='noreferrer'>{label}</a>
+							<time dateTime={date.toISOString().slice(0, 10)}>{getDateForPrint(date)}</time> - <a href={href} target='_blank' rel='noreferrer'>{label}<span aria-hidden="true">&#10138;</span></a>
 						</h3>
 					</li>
 				)) : null}
