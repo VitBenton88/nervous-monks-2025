@@ -8,6 +8,10 @@
     min-height: 100vh;
     overflow: hidden;
 
+    .events {
+        padding: 0 1em;
+    }
+
     &.regular {
         background-color: $white;
 
@@ -82,14 +86,10 @@
 
     &.eighties,
     &.trippy {
-        .events {
-            padding: 0 .75em;
-
-            .list {
-                border-radius: 25px;
-                padding-bottom: 1em;
-                padding-top: 1em;
-            }
+        .events .list {
+            border-radius: 25px;
+            padding-bottom: 1em;
+            padding-top: 1em;
         }
     }
 
