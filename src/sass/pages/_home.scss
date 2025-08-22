@@ -13,6 +13,10 @@
 		}
 	}
 
+	.events {
+		padding: 0 1.5em;
+	}
+
 	.events ul li {
 		&:not(:first-of-type) {
 			margin-top: 1em;
