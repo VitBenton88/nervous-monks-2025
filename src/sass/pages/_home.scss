@@ -21,7 +21,10 @@
 		a::after {
 			content: '\279A';
 			display: inline-block;
-			margin-left: 4px;
+			position: relative;
+			left: 4px;
+			top: -3px;
+			font-size: 14px;
 		}
 	}
 }
