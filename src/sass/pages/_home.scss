@@ -1,21 +1,27 @@
 #home {
-    text-align: center;
+	text-align: center;
 
-    nav {
+	nav {
 
-        h2.cta,
-        h3.cta {
-            margin: 20px 0 40px;
+		h2.cta,
+		h3.cta {
+			margin: 20px 0 40px;
 
-            a {
-                text-decoration: underline;
-            }
-        }
-    }
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
 
-    .events ul li {
-        &:not(:first-of-type) {
-            margin-top: 1em;
-        }
-    }
+	.events ul li {
+		&:not(:first-of-type) {
+			margin-top: 1em;
+		}
+
+		a::after {
+			content: '\279A';
+			display: inline-block;
+			margin-left: 4px;
+		}
+	}
 }
