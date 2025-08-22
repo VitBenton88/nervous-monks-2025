@@ -14,7 +14,13 @@
 	}
 
 	.events {
-		padding: 0 1.5em;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		max-width: calc(100vw - 1em);
+
+		.list {
+			padding: 0;
+		}
 	}
 
 	.events ul li {

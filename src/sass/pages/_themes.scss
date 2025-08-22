@@ -82,7 +82,7 @@
 
     &.eighties,
     &.trippy {
-        .events .list {
+        .events {
             border-radius: 25px;
             padding-bottom: 1em;
             padding-top: 1em;
@@ -285,12 +285,15 @@
             }
         }
 
-        .events .list {
+        .events {
             background-color: $yellow75;
 
-            p,
-            h3 a:hover {
-                color: $pink !important
+            .list {
+
+                p,
+                h3 a:hover {
+                    color: $pink !important
+                }
             }
         }
 
@@ -394,11 +397,13 @@
             width: 600px;
         }
 
-        .events .list {
+        .events {
             background-color: $black;
 
-            h3 a:hover {
-                color: $yellow !important
+            .list {
+                h3 a:hover {
+                    color: $yellow !important
+                }
             }
         }
     }
