@@ -29,6 +29,11 @@ const eventData: EventItem[] = [
 		href: toURLString('https://revelryfla.com/calendar/'),
 		label: 'Live At Revelry',
 	},
+	{
+		date: new Date('2025-12-07'),
+		href: toURLString('https://www.facebook.com/DanHoskerMusicContinuum/'),
+		label: 'Dan Hosker Music Continuum',
+	},
 ];
 
 const Events: React.FC = (): React.ReactNode => {
