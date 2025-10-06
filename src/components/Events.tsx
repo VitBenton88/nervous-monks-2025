@@ -27,7 +27,7 @@ const eventData: EventItem[] = [
 	{
 		date: new Date('2025-11-15'),
 		href: toURLString('https://www.mymamasdania.com/events'),
-		label: '2025 Holiday Toy Drive',
+		label: 'Toy Drive at My Mama’s Dania Beach',
 	},
 	{
 		date: new Date('2025-12-07'),
