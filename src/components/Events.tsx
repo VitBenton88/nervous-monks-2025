@@ -25,9 +25,9 @@ const eventData: EventItem[] = [
 	//     label: 'Woodstock',
 	// },
 	{
-		date: new Date('2025-10-03'),
-		href: toURLString('https://revelryfla.com/calendar/'),
-		label: 'Live At Revelry',
+		date: new Date('2025-11-15'),
+		href: toURLString('https://www.mymamasdania.com/events'),
+		label: '2025 Holiday Toy Drive',
 	},
 	{
 		date: new Date('2025-12-07'),
