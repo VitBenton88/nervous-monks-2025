@@ -25,11 +25,6 @@ const eventData: EventItem[] = [
 	//     label: 'Woodstock',
 	// },
 	{
-		date: new Date('2025-11-15'),
-		href: toURLString('https://www.mymamasdania.com/events'),
-		label: 'Toy Drive at My Mama’s Dania Beach',
-	},
-	{
 		date: new Date('2025-12-07'),
 		href: toURLString('https://www.facebook.com/DanHoskerMusicContinuum/'),
 		label: 'Dan Hosker Music Continuum',
