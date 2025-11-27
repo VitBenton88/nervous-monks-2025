@@ -20,6 +20,10 @@
         }
 
         .events .list {
+            h3 {
+                color: $white;
+            }
+
             h3 a:hover {
                 color: $red
             }
@@ -49,7 +53,6 @@
         }
     }
 
-    &.geo,
     &.neon,
     &.vortex {
         time {
@@ -57,7 +60,6 @@
         }
     }
 
-    &.vortex,
     &.neon,
     &.trippy {
 
@@ -80,6 +82,31 @@
         position: relative;
     }
 
+    &.neon,
+    &.regular,
+    &.trippy {
+        .events {
+            background-color: $black;
+        }
+    }
+
+    &.parrot,
+    &.regular,
+    &.trippy {
+        .events {
+
+            h2,
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    &.geo,
+    &.parrot,
+    &.neon,
+    &.regular,
+    &.vortex,
     &.eighties,
     &.trippy {
         .events {
@@ -92,11 +119,8 @@
     &.parrot {
 
         h1,
-        h2,
-        h3,
         h4,
         h5,
-        a,
         p,
         i,
         span,
@@ -111,6 +135,20 @@
         h2 a,
         time {
             color: $green !important;
+        }
+
+        .events {
+            background-color: $coral;
+
+            h3 {
+                color: $white;
+            }
+
+            .list a {
+                &:hover {
+                    color: $yellow !important;
+                }
+            }
         }
     }
 
@@ -211,6 +249,20 @@
 
                 li {
                     margin-top: 25px;
+                }
+            }
+        }
+
+        .events {
+            background-color: $coral;
+
+            h3 {
+                color: $white;
+            }
+
+            .list a {
+                &:hover {
+                    color: $yellow !important;
                 }
             }
         }
@@ -331,6 +383,16 @@
             animation: pulsate 4s infinite;
         }
 
+        .events {
+            background-color: $white;
+        }
+
+        h2 a,
+        .events h3,
+        #social i {
+            color: $white;
+        }
+
         h2 a,
         .events .list a {
             &:hover {
@@ -398,8 +460,6 @@
         }
 
         .events {
-            background-color: $black;
-
             .list {
                 h3 a:hover {
                     color: $yellow !important
