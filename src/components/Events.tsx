@@ -24,16 +24,6 @@ const eventData: EventItem[] = [
 	//     href: toURLString('https://www.example.com'),
 	//     label: 'Woodstock',
 	// },
-	{
-		date: new Date('2025-12-07'),
-		href: toURLString('https://www.facebook.com/DanHoskerMusicContinuum/'),
-		label: 'Dan Hosker Music Continuum',
-	},
-	{
-		date: new Date('2025-12-13'),
-		href: toURLString('https://purehoneymagazine.com/events/'),
-		label: 'Hollow Daze Party presented by Pure Honey',
-	},
 ];
 
 const Events: React.FC = (): React.ReactNode => {
