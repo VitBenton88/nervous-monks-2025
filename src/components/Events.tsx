@@ -8,15 +8,15 @@ interface EventItem {
 	label: string;
 }
 
-const toURLString = (value: string): URLString => {
-	// Validate that the string is a valid URL
-	try {
-		new URL(value); // This will throw if the URL is invalid
-		return value as URLString; // Type assertion after validation
-	} catch {
-		throw new Error(`Invalid URL: ${value}`);
-	}
-}
+// const toURLString = (value: string): URLString => {
+// 	// Validate that the string is a valid URL
+// 	try {
+// 		new URL(value); // This will throw if the URL is invalid
+// 		return value as URLString; // Type assertion after validation
+// 	} catch {
+// 		throw new Error(`Invalid URL: ${value}`);
+// 	}
+// }
 
 const eventData: EventItem[] = [
 	// {
