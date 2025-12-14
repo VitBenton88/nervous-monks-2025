@@ -142,7 +142,7 @@
 
             h3,
             .noEvents {
-                color: $white;
+                color: $white !important;
             }
 
             .list a {
@@ -339,7 +339,7 @@
         }
 
         .events {
-            background-color: $yellow75;
+            background-color: $yellow;
 
             .list {
 
@@ -377,6 +377,11 @@
         time {
             text-shadow: none;
         }
+
+        .events {
+            border: 1px solid rebeccapurple;
+            border-radius: 15px;
+        }
     }
 
     &.vortex {
@@ -386,6 +391,10 @@
 
         .events {
             background-color: $white;
+
+            .noEvents {
+                color: $black;
+            }
         }
 
         h2 a,
