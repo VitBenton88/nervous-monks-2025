@@ -12,7 +12,7 @@
         background-color: $white;
 
         .noEvents {
-            color: $black;
+            color: $white;
         }
 
         time {
@@ -140,7 +140,8 @@
         .events {
             background-color: $coral;
 
-            h3 {
+            h3,
+            .noEvents {
                 color: $white;
             }
 
