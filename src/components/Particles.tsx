@@ -25,6 +25,14 @@ interface Particle {
 
 
 const Particles: React.FC<BackgroundProps> = (): React.ReactNode => {
+    // The particle canvas is driven by JS, not CSS, so a media query alone
+    // can't stop it — skip rendering it for anyone who's told their OS they
+    // don't want motion. The theme keeps its glow/shadow styling either way.
+    const prefersReducedMotion = typeof window !== 'undefined'
+        && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) return null;
+
     let config = {
         num: [4, 7],
         rps: 0.1,

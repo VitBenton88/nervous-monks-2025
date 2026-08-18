@@ -1,4 +1,5 @@
 @use "../core/colors" as *;
+@use "../core/mixins" as *;
 
 #trippy-bkg {
     width: 100%;
@@ -21,6 +22,10 @@
         bottom: 0;
         mix-blend-mode: darken;
         animation: trippy_rotate 2.5s ease-in-out infinite alternate;
+
+        @include reduced-motion {
+            animation: none;
+        }
 
         &.yellow {
             background-image: radial-gradient($yellow 50%, transparent 54%);

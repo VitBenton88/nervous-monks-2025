@@ -2,6 +2,14 @@
  * Media Queries
 **/
 
+// Wrap an animation override in here so anyone who's told their OS they
+// don't want motion gets a static, still-themed version instead.
+@mixin reduced-motion() {
+	@media (prefers-reduced-motion: reduce) {
+		@content;
+	}
+}
+
 @mixin min-and-max-height($min-size, $max-size) {
 	@media only screen and (min-height: $min-size + px) and (max-height: $max-size + px) {
 		@content;

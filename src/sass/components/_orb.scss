@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use "../core/colors" as *;
+@use "../core/mixins" as *;
 
 #red-particles {
   // best in chrome
@@ -18,6 +19,18 @@
   perspective: 1000px;
   animation: rotate $time infinite linear; // rotate orb
   user-select: none;
+
+  // freezes the orb and every particle in place, visible rather than
+  // stuck at the keyframes' opacity:0 starting state — !important beats
+  // the more specific per-particle animation rules generated below
+  @include reduced-motion {
+    animation: none !important;
+
+    >div {
+      animation: none !important;
+      opacity: 1 !important;
+    }
+  }
 
   >div {
     position: absolute;
