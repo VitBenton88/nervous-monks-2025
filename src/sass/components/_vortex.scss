@@ -1,4 +1,5 @@
 @use "../core/colors" as *;
+@use "../core/mixins" as *;
 
 #vortex {
   //CONFIG
@@ -30,6 +31,12 @@
     width: 50rem;
     height: 50rem;
     animation: spin $time infinite alternate $ease;
+
+    // freezes every ring in place (delays don't matter without a name) —
+    // the 20-ring layout is still fully visible, just not spinning
+    @include reduced-motion {
+      animation: none;
+    }
 
     &:nth-child(1) {
       animation-delay: -$time * calc(1/$loops)
