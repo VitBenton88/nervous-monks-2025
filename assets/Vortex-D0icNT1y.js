@@ -1,0 +1,1 @@
+import{j as t}from"./index-C_DcpEaZ.js";const n=()=>{const r=[];for(let i=0;i<20;i++)r.push(t.jsx("div",{className:`ring el-${i}`},i));return t.jsx("div",{id:"vortex",children:r})};export{n as default};
