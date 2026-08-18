@@ -1,0 +1,1 @@
+import{j as s}from"./index-fa9x4dwE.js";const a=()=>s.jsxs("div",{id:"trippy-bkg",children:[s.jsx("div",{className:"box yellow"}),s.jsx("div",{className:"box turquoise"}),s.jsx("div",{className:"box black"}),s.jsx("div",{className:"box pink"})]});export{a as default};
